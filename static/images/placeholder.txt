@@ -1,0 +1,5 @@
+This directory contains placeholder images for the donation projects.
+In a real deployment, you would add actual project images here:
+- water-project.jpg
+- education-project.jpg  
+- food-project.jpg
