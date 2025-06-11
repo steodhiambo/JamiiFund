@@ -95,19 +95,19 @@ if (dev) {
         title: 'Clean Water for Rural Communities',
         description: 'Help us build water wells and provide clean drinking water to remote villages. Your donation will directly fund the construction of boreholes and water purification systems.',
         goal_amount: 500000, // 5000 KES
-        image_url: null
+        image_url: '/images/water-project.jpg'
       },
       {
         title: 'Education Support for Orphans',
         description: 'Support education for orphaned children by funding school fees, uniforms, and learning materials. Every donation helps a child stay in school.',
         goal_amount: 300000, // 3000 KES
-        image_url: null
+        image_url: '/images/education-project.jpg'
       },
       {
         title: 'Food Security Initiative',
         description: 'Combat hunger in underserved communities by providing nutritious meals and supporting local food production programs.',
         goal_amount: 750000, // 7500 KES
-        image_url: null
+        image_url: '/images/food-project.jpg'
       }
     ];
 
