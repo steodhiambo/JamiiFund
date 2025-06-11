@@ -1,14 +1,40 @@
 import { dev } from '$app/environment';
+import {
+  MPESA_CONSUMER_KEY,
+  MPESA_CONSUMER_SECRET,
+  MPESA_BUSINESS_SHORTCODE,
+  MPESA_PASSKEY,
+  MPESA_CALLBACK_URL
+} from '$env/static/private';
 import type { MpesaResponse } from './types';
 
-// Mpesa configuration - In production, these should be environment variables
+// Validate required environment variables
+function validateMpesaConfig() {
+  const requiredVars = {
+    MPESA_CONSUMER_KEY,
+    MPESA_CONSUMER_SECRET,
+    MPESA_PASSKEY,
+    MPESA_CALLBACK_URL
+  };
+
+  for (const [key, value] of Object.entries(requiredVars)) {
+    if (!value || value.includes('your_') || value.includes('replace_')) {
+      console.warn(`⚠️  ${key} is not properly configured. Mpesa payments will fail.`);
+    }
+  }
+}
+
+// Validate configuration on module load
+validateMpesaConfig();
+
+// Mpesa configuration
 const MPESA_CONFIG = {
-  consumerKey: dev ? 'your_sandbox_consumer_key' : 'your_production_consumer_key',
-  consumerSecret: dev ? 'your_sandbox_consumer_secret' : 'your_production_consumer_secret',
-  businessShortCode: dev ? '174379' : 'your_production_shortcode',
-  passkey: dev ? 'your_sandbox_passkey' : 'your_production_passkey',
+  consumerKey: dev ? MPESA_CONSUMER_KEY || 'your_sandbox_consumer_key' : 'your_production_consumer_key',
+  consumerSecret: dev ? MPESA_CONSUMER_SECRET || 'your_sandbox_consumer_secret' : 'your_production_consumer_secret',
+  businessShortCode: dev ? MPESA_BUSINESS_SHORTCODE || '174379' : 'your_production_shortcode',
+  passkey: dev ? MPESA_PASSKEY || 'your_sandbox_passkey' : 'your_production_passkey',
   baseUrl: dev ? 'https://sandbox.safaricom.co.ke' : 'https://api.safaricom.co.ke',
-  callbackUrl: dev ? 'https://your-ngrok-url.ngrok.io/api/mpesa/callback' : 'https://yourdomain.com/api/mpesa/callback'
+  callbackUrl: dev ? MPESA_CALLBACK_URL || 'https://your-ngrok-url.ngrok.io/api/mpesa/callback' : 'https://yourdomain.com/api/mpesa/callback'
 };
 
 class MpesaService {
@@ -38,7 +64,7 @@ class MpesaService {
       this.accessToken = data.access_token;
       this.tokenExpiry = Date.now() + (data.expires_in * 1000) - 60000; // Refresh 1 minute before expiry
       
-      return this.accessToken;
+      return this.accessToken!;
     } catch (error) {
       console.error('Error getting Mpesa access token:', error);
       throw error;
