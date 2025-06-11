@@ -120,7 +120,7 @@
   .dashboard-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .dashboard-header p {
@@ -152,7 +152,7 @@
   .stat-value {
     font-size: 1.75rem;
     font-weight: bold;
-    color: #1e293b;
+    color: #1E40AF;
     margin-bottom: 0.25rem;
   }
 
@@ -176,7 +176,7 @@
 
   .section h2 {
     margin-bottom: 1.5rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .projects-table {
@@ -208,7 +208,7 @@
 
   .project-title {
     font-weight: 500;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .progress-cell {
@@ -227,7 +227,7 @@
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(90deg, #059669 0%, #059669 100%);
     transition: width 0.3s ease;
   }
 
@@ -254,7 +254,7 @@
 
   .donation-project {
     font-weight: 500;
-    color: #1e293b;
+    color: #1E40AF;
     margin-bottom: 0.25rem;
   }
 

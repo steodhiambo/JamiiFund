@@ -57,7 +57,7 @@
 
 <style>
   .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1E40AF 0%, #059669 100%);
     color: white;
     padding: 4rem 0;
   }
@@ -123,7 +123,7 @@
   .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .section-header p {

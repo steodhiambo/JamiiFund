@@ -92,7 +92,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.75rem;
-    color: #1e293b;
+    color: #1E40AF;
     line-height: 1.3;
   }
 
@@ -136,7 +136,7 @@
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(90deg, #059669 0%, #059669 100%);
     transition: width 0.3s ease;
   }
 
@@ -164,22 +164,23 @@
   }
 
   .btn-primary {
-    background: #2563eb;
+    background: #FB923C;
     color: white;
   }
 
   .btn-primary:hover {
-    background: #1d4ed8;
+    background: #ea7c1f;
   }
 
   .btn-secondary {
-    background: #f1f5f9;
-    color: #475569;
+    background: #F8FAFC;
+    color: #64748B;
     border: 1px solid #e2e8f0;
   }
 
   .btn-secondary:hover {
     background: #e2e8f0;
+    color: #1E40AF;
   }
 
   @media (max-width: 768px) {
