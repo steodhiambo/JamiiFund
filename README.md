@@ -178,7 +178,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 For support, questions, or partnership opportunities:
 
 - **Email**: [info@jamiifund.org](mailto:info@jamiifund.org)
-- **Phone**: +2547803833825
+- **Phone**: +254780383825
 - **Website**: [jamiifund.org](https://jamiifund.org)
 
 ---
