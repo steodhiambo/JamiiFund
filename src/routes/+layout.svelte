@@ -86,7 +86,7 @@
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: #2563eb;
+    color: #1E40AF;
     font-weight: bold;
     font-size: 1.5rem;
   }
@@ -108,7 +108,7 @@
   }
 
   .nav-link:hover {
-    color: #2563eb;
+    color: #1E40AF;
   }
 
   .main {
@@ -116,7 +116,7 @@
   }
 
   .footer {
-    background: #1e293b;
+    background: #1E40AF;
     color: white;
     margin-top: auto;
   }
@@ -147,10 +147,10 @@
   }
 
   .footer-bottom {
-    border-top: 1px solid #334155;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1rem 0;
     text-align: center;
-    color: #94a3b8;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 768px) {

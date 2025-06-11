@@ -109,7 +109,7 @@
   }
 
   .back-link a {
-    color: #2563eb;
+    color: #1E40AF;
     text-decoration: none;
     font-weight: 500;
   }
@@ -155,7 +155,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #1E40AF;
     line-height: 1.2;
   }
 
@@ -184,7 +184,7 @@
     display: block;
     font-size: 1.25rem;
     font-weight: bold;
-    color: #1e293b;
+    color: #1E40AF;
     margin-bottom: 0.25rem;
   }
 
@@ -207,7 +207,7 @@
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(90deg, #059669 0%, #059669 100%);
     transition: width 0.3s ease;
   }
 
@@ -233,7 +233,7 @@
 
   .donation-section h2 {
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .donation-section p {
@@ -251,7 +251,7 @@
 
   .recent-donations h3 {
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .donations-list {
