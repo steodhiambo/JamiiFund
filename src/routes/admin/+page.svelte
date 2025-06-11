@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Admin Dashboard - DonateGood</title>
+  <title>Admin Dashboard - JamiiFund</title>
 </svelte:head>
 
 <div class="dashboard">

@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>{project.title} - DonateGood</title>
+  <title>{project.title} - JamiiFund</title>
   <meta name="description" content={project.description} />
 </svelte:head>
 

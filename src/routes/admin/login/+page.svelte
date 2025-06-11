@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Admin Login - DonateGood</title>
+  <title>Admin Login - JamiiFund</title>
 </svelte:head>
 
 <div class="login-container">
@@ -196,5 +196,34 @@
 
   .login-footer a:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 1rem;
+    }
+
+    .login-card {
+      padding: 2rem;
+      max-width: 100%;
+    }
+
+    .login-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .login-header p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 1.5rem;
+    }
+
+    .login-header h1 {
+      font-size: 1.5rem;
+    }
   }
 </style>

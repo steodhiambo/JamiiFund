@@ -11,7 +11,7 @@
         <nav class="nav">
           <a href="/" class="logo">
             <span class="logo-icon">💝</span>
-            <span class="logo-text">DonateGood</span>
+            <span class="logo-text">JamiiFund</span>
           </a>
           <div class="nav-links">
             <a href="/" class="nav-link">Projects</a>
@@ -31,7 +31,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>DonateGood</h3>
+            <h3>JamiiFund</h3>
             <p>Supporting social projects through anonymous donations.</p>
           </div>
           <div class="footer-section">
@@ -41,12 +41,12 @@
           </div>
           <div class="footer-section">
             <h4>Contact</h4>
-            <p>Email: info@donategood.org</p>
+            <p>Email: info@jamiifund.org</p>
             <p>Phone: +254 700 000 000</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 DonateGood. All rights reserved.</p>
+          <p>&copy; 2024 JamiiFund. All rights reserved.</p>
         </div>
       </div>
     </footer>

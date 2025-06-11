@@ -41,7 +41,7 @@
 </script>
 
 <svelte:head>
-  <title>Donation Status - DonateGood</title>
+  <title>Donation Status - JamiiFund</title>
 </svelte:head>
 
 <div class="success-page">

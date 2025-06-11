@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>DonateGood - Support Social Projects</title>
+  <title>JamiiFund - Support Social Projects</title>
   <meta name="description" content="Browse and support social projects through anonymous donations. Help fund clean water, education, and food security initiatives." />
 </svelte:head>
 
