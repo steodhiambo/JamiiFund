@@ -1,30 +1,30 @@
-# JamiiFund 🌍
+# JamiiFund 
 
 ## Project Overview
 
 JamiiFund is a modern, secure donation platform that connects generous donors with impactful community projects. Built with SvelteKit and integrated with Mpesa, it enables anonymous donations to verified social initiatives focused on clean water, education, and food security.
 
-## ✨ Key Features
+##  Key Features
 
-### 🎯 For Donors
+###  For Donors
 - **Anonymous Donations** - No registration required, complete privacy protection
 - **Secure Payments** - Integrated Mpesa STK Push for seamless transactions
 - **Real-time Impact** - Live progress tracking and transparent fund usage
 - **Mobile-First Design** - Optimized for all devices and screen sizes
 
-### 🛡️ For Administrators
+###  For Administrators
 - **Comprehensive Dashboard** - Real-time analytics and donation insights
 - **Project Management** - Easy creation and management of social initiatives
 - **Secure Access** - Password-protected admin interface with session management
 - **Donation Tracking** - Detailed transaction monitoring and reporting
 
-### 🎨 User Experience
+###  User Experience
 - **Professional Design** - Clean, trustworthy interface with professional color scheme
 - **Responsive Layout** - Seamless experience across desktop, tablet, and mobile
 - **Intuitive Navigation** - Easy-to-use interface for all user types
 - **Fast Performance** - Optimized loading and smooth interactions
 
-## 🚀 Technology Stack
+##  Technology Stack
 
 - **Framework**: SvelteKit with TypeScript
 - **Database**: SQLite with better-sqlite3
@@ -32,7 +32,7 @@ JamiiFund is a modern, secure donation platform that connects generous donors wi
 - **Styling**: Custom CSS with responsive design
 - **Security**: Cookie-based authentication and rate limiting
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js** v18+
@@ -66,23 +66,23 @@ MPESA_PASSKEY=your_passkey
 MPESA_CALLBACK_URL=your_callback_url
 ```
 
-**🌐 Access the application at:** `http://localhost:5173`
+** Access the application at:** `http://localhost:5173`
 
-## 📖 How It Works
+## How It Works
 
-### 💝 For Donors
+###  For Donors
 1. **Browse Projects** - Explore verified social initiatives on the homepage
 2. **Select & Donate** - Choose a project and enter your donation amount
 3. **Secure Payment** - Complete payment via Mpesa STK Push
 4. **Track Impact** - See real-time progress and impact of your contribution
 
-### 🛡️ For Administrators
+###  For Administrators
 1. **Access Admin Panel** - Navigate to `/admin/login`
 2. **Secure Login** - Enter admin credentials (default: `admin123`)
 3. **Monitor Dashboard** - View real-time analytics and donation insights
 4. **Manage Projects** - Create, edit, and track social initiatives
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 JamiiFund/
@@ -104,7 +104,7 @@ JamiiFund/
 └── README.md                # Documentation
 ```
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -112,7 +112,7 @@ JamiiFund/
 | `POST` | `/api/mpesa/callback` | Mpesa payment callback |
 | `GET` | `/api/donation/status` | Check donation status |
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### Projects
 | Field | Type | Description |
@@ -137,7 +137,7 @@ JamiiFund/
 | `status` | TEXT | Payment status (pending/completed/failed) |
 | `created_at` | DATETIME | Creation timestamp |
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Build
 ```bash
@@ -145,21 +145,21 @@ npm run build
 npm run preview  # Test production build locally
 ```
 
-### 🔒 Security Checklist
-- ✅ Change default admin password
-- ✅ Use environment variables for sensitive data
-- ✅ Enable HTTPS in production
-- ✅ Implement rate limiting for API endpoints
-- ✅ Validate and sanitize all user inputs
-- ✅ Configure secure Mpesa production credentials
+###  Security Checklist
+-  Change default admin password
+-  Use environment variables for sensitive data
+-  Enable HTTPS in production
+-  Implement rate limiting for API endpoints
+-  Validate and sanitize all user inputs
+-  Configure secure Mpesa production credentials
 
-### 🌐 Environment Setup
+###  Environment Setup
 - Configure production database
 - Set up secure admin credentials
 - Enable HTTPS for secure cookies
 - Configure production Mpesa endpoints
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -169,18 +169,18 @@ We welcome contributions! Please follow these steps:
 4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License** - see the LICENSE file for details.
 
-## 💬 Support
+##  Support
 
 For support, questions, or partnership opportunities:
 
 - **Email**: [info@jamiifund.org](mailto:info@jamiifund.org)
-- **Phone**: +254 700 000 000
+- **Phone**: +2547803833825
 - **Website**: [jamiifund.org](https://jamiifund.org)
 
 ---
 
-**Made with ❤️ for social impact** | **JamiiFund - Empowering Communities Through Anonymous Donations**
+
