@@ -49,9 +49,6 @@ cd JamiiFund
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your Mpesa credentials
 
 # Start development server
 npm run dev
