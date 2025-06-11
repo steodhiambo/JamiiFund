@@ -142,7 +142,7 @@
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .success-message,
@@ -182,7 +182,7 @@
     width: 40px;
     height: 40px;
     border: 4px solid #e2e8f0;
-    border-top: 4px solid #2563eb;
+    border-top: 4px solid #1E40AF;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 1rem auto;
@@ -211,22 +211,23 @@
   }
 
   .btn-primary {
-    background: #2563eb;
+    background: #FB923C;
     color: white;
   }
 
   .btn-primary:hover {
-    background: #1d4ed8;
+    background: #ea7c1f;
   }
 
   .btn-secondary {
-    background: #f1f5f9;
-    color: #475569;
+    background: #F8FAFC;
+    color: #64748B;
     border: 1px solid #e2e8f0;
   }
 
   .btn-secondary:hover {
     background: #e2e8f0;
+    color: #1E40AF;
   }
 
   @media (max-width: 768px) {

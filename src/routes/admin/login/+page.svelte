@@ -74,7 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1E40AF 0%, #059669 100%);
     padding: 2rem;
   }
 
@@ -95,7 +95,7 @@
   .login-header h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #1E40AF;
   }
 
   .login-header p {
@@ -128,7 +128,7 @@
 
   .password-input:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #1E40AF;
   }
 
   .password-input:disabled {
@@ -149,7 +149,7 @@
   .login-btn {
     width: 100%;
     padding: 0.75rem;
-    background: #2563eb;
+    background: #FB923C;
     color: white;
     border: none;
     border-radius: 8px;
@@ -160,7 +160,7 @@
   }
 
   .login-btn:hover:not(:disabled) {
-    background: #1d4ed8;
+    background: #ea7c1f;
   }
 
   .login-btn:disabled {
@@ -189,7 +189,7 @@
   }
 
   .login-footer a {
-    color: #2563eb;
+    color: #FB923C;
     text-decoration: none;
     font-weight: 500;
   }

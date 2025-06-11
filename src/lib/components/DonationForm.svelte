@@ -187,13 +187,13 @@
   }
 
   .amount-btn:hover {
-    border-color: #2563eb;
+    border-color: #1E40AF;
   }
 
   .amount-btn.selected {
-    border-color: #2563eb;
+    border-color: #1E40AF;
     background: #eff6ff;
-    color: #2563eb;
+    color: #1E40AF;
   }
 
   .amount-input,
@@ -209,7 +209,7 @@
   .amount-input:focus,
   .phone-input:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #1E40AF;
   }
 
   .help-text {
@@ -232,7 +232,7 @@
   .submit-btn {
     width: 100%;
     padding: 1rem;
-    background: #10b981;
+    background: #FB923C;
     color: white;
     border: none;
     border-radius: 8px;
@@ -243,7 +243,7 @@
   }
 
   .submit-btn:hover:not(:disabled) {
-    background: #059669;
+    background: #ea7c1f;
   }
 
   .submit-btn:disabled {
@@ -262,7 +262,7 @@
   .security-note p {
     margin: 0;
     font-size: 0.875rem;
-    color: #0369a1;
+    color: #1E40AF;
   }
 
   @media (max-width: 480px) {
