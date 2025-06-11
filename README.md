@@ -18,11 +18,6 @@ JamiiFund is a modern, secure donation platform that connects generous donors wi
 - **Secure Access** - Password-protected admin interface with session management
 - **Donation Tracking** - Detailed transaction monitoring and reporting
 
-###  User Experience
-- **Professional Design** - Clean, trustworthy interface with professional color scheme
-- **Responsive Layout** - Seamless experience across desktop, tablet, and mobile
-- **Intuitive Navigation** - Easy-to-use interface for all user types
-- **Fast Performance** - Optimized loading and smooth interactions
 
 ##  Technology Stack
 
@@ -54,16 +49,67 @@ npm install
 npm run dev
 ```
 
-### Environment Configuration
-```env
-MPESA_CONSUMER_KEY=your_consumer_key
-MPESA_CONSUMER_SECRET=your_consumer_secret
-MPESA_BUSINESS_SHORTCODE=your_shortcode
-MPESA_PASSKEY=your_passkey
-MPESA_CALLBACK_URL=your_callback_url
+###  Environment Configuration
+
+**Option 1: Quick UI Testing (No Mpesa Setup)**
+```bash
+# Just copy the example file - payments won't work but UI will
+cp .env.example .env
+npm run dev
+# You can browse projects, see admin panel, but donations won't process
+```
+
+**Option 2: Full Mpesa Testing**
+```bash
+# 1. Copy example file
+cp .env.example .env
+
+# 2. Get Mpesa sandbox credentials from:
+# https://developer.safaricom.co.ke/
+
+# 3. Edit .env with your credentials:
+MPESA_CONSUMER_KEY=your_actual_key
+MPESA_CONSUMER_SECRET=your_actual_secret
+MPESA_BUSINESS_SHORTCODE=174379
+MPESA_PASSKEY=your_actual_passkey
+MPESA_CALLBACK_URL=https://your-ngrok-url.com/api/mpesa/callback
+
+# 4. Use ngrok for local testing:
+# npx ngrok http 5173
 ```
 
 ** Access the application at:** `http://localhost:5173`
+
+##  Testing the Application
+
+### Without Mpesa Setup (UI Testing Only)
+-  Browse all projects and pages
+-  View project details and donation forms
+- Access admin panel (`/admin/login` - password: `admin123`)
+-  See all UI components and responsive design
+-  Actual payments won't process (will show errors)
+
+### With Mpesa Sandbox (Full Testing)
+1. **Get Mpesa Sandbox Credentials**:
+   - Visit [Safaricom Developer Portal](https://developer.safaricom.co.ke/)
+   - Create an app and get credentials
+   - Use sandbox environment for testing
+
+2. **Setup Local Testing**:
+   ```bash
+   # Install ngrok for public URL
+   npm install -g ngrok
+
+   # Expose your local server
+   ngrok http 5173
+
+   # Copy the https URL to your .env file
+   ```
+
+3. **Test Payments**:
+   - Use sandbox phone numbers: `254708374149`
+   - Test with small amounts: 1-100 KES
+   - Check admin panel for donation records
 
 ## How It Works
 
@@ -142,13 +188,6 @@ npm run build
 npm run preview  # Test production build locally
 ```
 
-###  Security Checklist
--  Change default admin password
--  Use environment variables for sensitive data
--  Enable HTTPS in production
--  Implement rate limiting for API endpoints
--  Validate and sanitize all user inputs
--  Configure secure Mpesa production credentials
 
 ###  Environment Setup
 - Configure production database
