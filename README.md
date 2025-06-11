@@ -1,56 +1,63 @@
-# JamiiFund - Anonymous Donation Platform
+# JamiiFund 🌍
 
-A SvelteKit-based web application that allows well-wishers to anonymously donate to various social projects. The platform includes an administrative interface for tracking donations and managing projects, with integrated Mpesa payment processing.
+## Project Overview
 
-## Features
+JamiiFund is a modern, secure donation platform that connects generous donors with impactful community projects. Built with SvelteKit and integrated with Mpesa, it enables anonymous donations to verified social initiatives focused on clean water, education, and food security.
 
-### Public Interface
-- **Project Browsing**: View all active social projects with descriptions and funding goals
-- **Anonymous Donations**: Make donations without requiring user registration
-- **Mpesa Integration**: Secure payment processing through Mpesa STK Push
-- **Real-time Progress**: Live updates on project funding progress
-- **Responsive Design**: Mobile-friendly interface
+## ✨ Key Features
 
-### Admin Interface
-- **Dashboard**: Overview of platform statistics and performance
-- **Project Management**: Add, edit, and manage social projects
-- **Donation Tracking**: Monitor all donations with detailed analytics
-- **Secure Authentication**: Password-protected admin access
+### 🎯 For Donors
+- **Anonymous Donations** - No registration required, complete privacy protection
+- **Secure Payments** - Integrated Mpesa STK Push for seamless transactions
+- **Real-time Impact** - Live progress tracking and transparent fund usage
+- **Mobile-First Design** - Optimized for all devices and screen sizes
 
-## Technology Stack
+### 🛡️ For Administrators
+- **Comprehensive Dashboard** - Real-time analytics and donation insights
+- **Project Management** - Easy creation and management of social initiatives
+- **Secure Access** - Password-protected admin interface with session management
+- **Donation Tracking** - Detailed transaction monitoring and reporting
 
-- **Frontend**: SvelteKit with TypeScript
+### 🎨 User Experience
+- **Professional Design** - Clean, trustworthy interface with professional color scheme
+- **Responsive Layout** - Seamless experience across desktop, tablet, and mobile
+- **Intuitive Navigation** - Easy-to-use interface for all user types
+- **Fast Performance** - Optimized loading and smooth interactions
+
+## 🚀 Technology Stack
+
+- **Framework**: SvelteKit with TypeScript
 - **Database**: SQLite with better-sqlite3
 - **Payments**: Mpesa API integration
 - **Styling**: Custom CSS with responsive design
-- **Authentication**: Cookie-based session management
+- **Security**: Cookie-based authentication and rate limiting
 
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-- Mpesa API credentials (for payment processing)
+- **Node.js** v18+
+- **npm** or yarn
+- **Mpesa API** credentials (for payment processing)
 
 ### Installation
 
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd donation-platform
-```
+# Clone the repository
+git clone https://github.com/steodhiambo/JamiiFund.git
+cd JamiiFund
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Set up environment variables:
-```bash
+# Set up environment variables
 cp .env.example .env
+# Edit .env with your Mpesa credentials
+
+# Start development server
+npm run dev
 ```
 
-Edit `.env` with your Mpesa API credentials:
+### Environment Configuration
 ```env
 MPESA_CONSUMER_KEY=your_consumer_key
 MPESA_CONSUMER_SECRET=your_consumer_secret
@@ -59,104 +66,121 @@ MPESA_PASSKEY=your_passkey
 MPESA_CALLBACK_URL=your_callback_url
 ```
 
-4. Start the development server:
-```bash
-npm run dev
-```
+**🌐 Access the application at:** `http://localhost:5173`
 
-5. Open your browser and navigate to `http://localhost:5173`
+## 📖 How It Works
 
-## Usage
+### 💝 For Donors
+1. **Browse Projects** - Explore verified social initiatives on the homepage
+2. **Select & Donate** - Choose a project and enter your donation amount
+3. **Secure Payment** - Complete payment via Mpesa STK Push
+4. **Track Impact** - See real-time progress and impact of your contribution
 
-### For Donors
-1. Browse available projects on the homepage
-2. Click on a project to view details
-3. Enter donation amount and phone number
-4. Complete payment via Mpesa prompt on your phone
-5. Receive confirmation of successful donation
+### 🛡️ For Administrators
+1. **Access Admin Panel** - Navigate to `/admin/login`
+2. **Secure Login** - Enter admin credentials (default: `admin123`)
+3. **Monitor Dashboard** - View real-time analytics and donation insights
+4. **Manage Projects** - Create, edit, and track social initiatives
 
-### For Administrators
-1. Navigate to `/admin/login`
-2. Enter admin password (default: `admin123`)
-3. Access dashboard to view statistics
-4. Manage projects and monitor donations
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-src/
-├── lib/
-│   ├── components/          # Reusable Svelte components
-│   ├── database.ts         # Database setup and queries
-│   ├── mpesa.ts           # Mpesa API integration
-│   └── types.ts           # TypeScript type definitions
-├── routes/
-│   ├── admin/             # Admin interface routes
-│   ├── api/               # API endpoints
-│   ├── donation/          # Donation-related pages
-│   └── project/           # Project detail pages
-└── app.html               # Main HTML template
+JamiiFund/
+├── src/
+│   ├── lib/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── database.ts      # SQLite database setup
+│   │   ├── mpesa.ts         # Mpesa payment integration
+│   │   └── types.ts         # TypeScript definitions
+│   ├── routes/
+│   │   ├── about/           # About page
+│   │   ├── contact/         # Contact page
+│   │   ├── admin/           # Admin dashboard
+│   │   ├── api/             # API endpoints
+│   │   └── project/         # Project pages
+│   └── app.html             # Main template
+├── static/
+│   └── images/              # Project images
+└── README.md                # Documentation
 ```
 
-## API Endpoints
+## 🔌 API Endpoints
 
-- `POST /api/donate` - Initiate donation
-- `POST /api/mpesa/callback` - Mpesa payment callback
-- `GET /api/donation/status` - Check donation status
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/donate` | Initiate donation process |
+| `POST` | `/api/mpesa/callback` | Mpesa payment callback |
+| `GET` | `/api/donation/status` | Check donation status |
 
-## Database Schema
+## 🗄️ Database Schema
 
-### Projects Table
-- `id` - Primary key
-- `title` - Project title
-- `description` - Project description
-- `goal_amount` - Funding goal (in cents)
-- `current_amount` - Current funding (in cents)
-- `image_url` - Project image URL
-- `created_at` - Creation timestamp
-- `updated_at` - Last update timestamp
+### Projects
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | INTEGER | Primary key |
+| `title` | TEXT | Project title |
+| `description` | TEXT | Project description |
+| `goal_amount` | INTEGER | Funding goal (in cents) |
+| `current_amount` | INTEGER | Current funding (in cents) |
+| `image_url` | TEXT | Project image URL |
+| `created_at` | DATETIME | Creation timestamp |
+| `updated_at` | DATETIME | Last update timestamp |
 
-### Donations Table
-- `id` - Primary key
-- `project_id` - Foreign key to projects
-- `amount` - Donation amount (in cents)
-- `mpesa_transaction_id` - Mpesa transaction reference
-- `phone_number` - Donor phone number
-- `status` - Payment status (pending/completed/failed)
-- `created_at` - Creation timestamp
+### Donations
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | INTEGER | Primary key |
+| `project_id` | INTEGER | Foreign key to projects |
+| `amount` | INTEGER | Donation amount (in cents) |
+| `mpesa_transaction_id` | TEXT | Mpesa transaction reference |
+| `phone_number` | TEXT | Donor phone number |
+| `status` | TEXT | Payment status (pending/completed/failed) |
+| `created_at` | DATETIME | Creation timestamp |
 
-## Deployment
+## 🚀 Deployment
 
-### Building for Production
+### Production Build
 ```bash
 npm run build
+npm run preview  # Test production build locally
 ```
 
-### Environment Setup
-- Set up production database
-- Configure Mpesa production credentials
-- Set secure admin password
+### 🔒 Security Checklist
+- ✅ Change default admin password
+- ✅ Use environment variables for sensitive data
+- ✅ Enable HTTPS in production
+- ✅ Implement rate limiting for API endpoints
+- ✅ Validate and sanitize all user inputs
+- ✅ Configure secure Mpesa production credentials
+
+### 🌐 Environment Setup
+- Configure production database
+- Set up secure admin credentials
 - Enable HTTPS for secure cookies
+- Configure production Mpesa endpoints
 
-### Security Considerations
-- Change default admin password
-- Use environment variables for sensitive data
-- Enable HTTPS in production
-- Implement rate limiting for API endpoints
-- Validate and sanitize all user inputs
+## 🤝 Contributing
 
-## Contributing
+We welcome contributions! Please follow these steps:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **MIT License** - see the LICENSE file for details.
 
-## Support
+## 💬 Support
 
-For support or questions, please contact [support@jamiifund.org]
+For support, questions, or partnership opportunities:
+
+- **Email**: [info@jamiifund.org](mailto:info@jamiifund.org)
+- **Phone**: +254 700 000 000
+- **Website**: [jamiifund.org](https://jamiifund.org)
+
+---
+
+**Made with ❤️ for social impact** | **JamiiFund - Empowering Communities Through Anonymous Donations**
