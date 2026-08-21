@@ -1,7 +1,9 @@
 import Database from 'better-sqlite3';
 import { dev } from '$app/environment';
 
-const db = new Database(dev ? 'dev.db' : 'production.db');
+// Serverless platforms (Vercel) only allow writes to /tmp
+const dbPath = dev ? 'dev.db' : '/tmp/jamiifund.db';
+const db = new Database(dbPath);
 
 // Enable foreign keys
 db.pragma('foreign_keys = ON');
@@ -33,6 +35,36 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_donations_project_id ON donations(project_id);
   CREATE INDEX IF NOT EXISTS idx_donations_status ON donations(status);
 `);
+
+// Seed sample projects on a fresh database so the demo is never empty
+const projectCount = (db.prepare('SELECT COUNT(*) AS count FROM projects').get() as { count: number }).count;
+if (projectCount === 0) {
+  const seed = db.prepare(`
+    INSERT INTO projects (title, description, goal_amount, current_amount, image_url)
+    VALUES (?, ?, ?, ?, ?)
+  `);
+  seed.run(
+    'Clean Water for Bondo',
+    'Installing rainwater harvesting and filtration systems for 3 rural schools in Siaya County.',
+    500000,
+    185000,
+    'https://images.unsplash.com/photo-1541919329513-35f7af297129?w=800'
+  );
+  seed.run(
+    'Girls Keep Learning',
+    'Providing sanitary towels and learning materials to keep girls in class throughout the school term.',
+    250000,
+    97500,
+    'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800'
+  );
+  seed.run(
+    'Kisumu Youth Tech Hub',
+    'Equipping a community tech centre with computers and internet for free digital skills training.',
+    800000,
+    310000,
+    'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800'
+  );
+}
 
 // Prepared statements
 export const statements = {
